@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# Block title : titre de la page, avec une valeur par défaut #}
+    <title>{% block title %}Accueil{% endblock %} - XMP</title>
+    {# Block stylesheets : contient les CSS de la page, avec les CSS par défaut déjà renseignés #}
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/font-awesome-4.6.1/css/font-awesome.min.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/bootstrap/css/styles.css') }}"/>
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+<div class="column col-sm-12 col-xs-12" id="main">
+    {# Block header : contient le header de notre site #}
+    {# Block nav : contient la navigation de notre site #}
+    {% block nav %}
+        {{ include('AppBundle::_nav.html.twig') }}
+    {% endblock %}
+    {#<ul class="breadcrumb">#}
+        {# Block breadcrumb : contient les <li> de notre breadcrumb #}
+    {#    {% block breadcrumb %}
+            <li>
+                <a href="{{ path('app_default_index') }}">
+                    <span class="fa fa-home"></span>
+                </a>
+            </li>
+        {% endblock %}
+    </ul> #}
+    {# Block body : contenu de la page #}
+
+    {% block body %}{% endblock %}
+</div>
+{# Block javascripts : contient les JS de la page, avec les JS par défaut déjà renseignés #}
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('assets/jquery-2.2.3.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/bootstrap/js/scripts.js') }}"></script>
+{% endblock %}
+</body>
+</html>

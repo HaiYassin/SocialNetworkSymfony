@@ -1,0 +1,11 @@
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix: /mon-espace
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+logout:
+  path: /logout

@@ -1,0 +1,33 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}Mon image de profil{% endblock %}
+
+{% block body %}
+
+    <div class="padding">
+        <div class="full col-xs-12">
+
+            <!-- content -->
+            <div class="row">
+
+                <!-- main col left -->
+                <div class="col-xs-8 col-lg-8">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            {{ form_start(form) }}
+                            {{ form_errors(form) }}
+                            {{ form_widget(form) }}
+                            <br>
+                            <button type="submit" class="btn btn-warning">
+                                Changer ma photo de profil
+                                <span class="fa fa-pencil fa-fw"></span>
+                            </button>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

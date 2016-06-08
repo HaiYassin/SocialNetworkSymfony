@@ -1,0 +1,81 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block body %}
+<div class="padding">
+    <div class="full col-xs-12">
+
+        <!-- content -->
+        <div class="row">
+
+            <!-- main col left -->
+            <div class="col-xs-8 col-lg-8">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="pull-right">
+                            <a href="#" class="pull-right">
+                                <i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <h1>Mon Espace</h1>
+                        <div id="picture-profil" class="thumbnail">
+                            <a href="#" class="pull-right">
+                                <i class="fa fa-picture-o text-info"" aria-hidden="true"> Changer son image de profil</i>
+                            </a>
+                            <img src="{{ asset(user.path|default('img/apple-touch-icon.png')) }}" class="img-responsive" width="200"/>
+                        </div>
+
+
+                    </div>
+                    <div class="panel-body">
+                        <p class="text-center">Bonjour {{ user.lastname }},</p>
+                        <div class="clearfix"></div>
+                        <p>Mail: {{ user.username }}</p>
+                        <hr>
+                        <p>Nom: {{ user.lastname }}</p>
+                        <hr>
+                        <p>Prenom: {{ user.firstname }}</p>
+                        <hr>
+                        <p>Numéro de Tél: </p>
+                        <hr>
+                        <p>Job: </p>
+                        <hr>
+                        <p>Adresse: </p>
+                        <hr>
+                        <p>Pays: </p>
+                        <hr>
+                        <p>Profil: </p>
+                        <hr>
+                        <ul class="list-unstyled">
+                            <li>Dashboard</li>
+                            <li>Darkside</li>
+                            <li>Greenfield</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+                <div class="col-xs-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                                <a href="{{ path('user_default_password') }}" class="text-center text-warning">
+                                    <i class="fa fa-cog fa-1x" aria-hidden="true"> Modifier votre mot de passe</i>
+                                </a>
+                        </div>
+                        <div class="panel-heading">
+                            <a href="{{ path('user_default_modifpp') }}" class="text-center text-warning">
+                                <i class="fa fa-cog fa-1x" aria-hidden="true"> Modifier mon image de profil</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}
