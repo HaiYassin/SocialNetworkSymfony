@@ -1,0 +1,50 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+<div class="padding">
+    <div class="full col-xs-12">
+
+        <!-- content -->
+        <div class="row">
+
+            <!-- main col left -->
+            <div class="col-xs-12 col-lg-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h2>Nos coordonnées</h2>
+                        <p>
+                            Illo error provident ducimus reiciendis natus iure placeat. Magnam consequuntur provident optio impedit vel. Et quas quidem accusamus eveniet.
+                            Illo error provident ducimus reiciendis natus iure placeat. Magnam consequuntur provident optio impedit vel. Et quas quidem accusamus eveniet.
+                        </p>
+                        <dl class="dl-horizontal">
+                            <dt><span class="fa fa-phone fa-fw"></span></dt>
+                            <dd>0123456789</dd>
+                            <dt><span class="fa fa-envelope-o fa-fw"></span></dt>
+                            <dd><a href="mailto:contact@hitema.fr">contact@h.fr</a></dd>
+                        </dl>
+                        <p>
+                            Illo error provident ducimus reiciendis natus iure placeat. Magnam consequuntur provident optio impedit vel. Et quas quidem accusamus eveniet.
+                            Illo error provident ducimus reiciendis natus iure placeat. Magnam consequuntur provident optio impedit vel. Et quas quidem accusamus eveniet.
+                            Illo error provident ducimus reiciendis natus iure placeat. Magnam consequuntur provident optio impedit vel. Et quas quidem accusamus eveniet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <div class="col-xs-12 col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2>Envoyez nous un message</h2>
+                    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+                    {{ form_start(form) }}
+                    {{ form_errors(form) }}
+                    {{ form_widget(form) }}
+                    <button class="btn btn-success btn-block">Envoyer</button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

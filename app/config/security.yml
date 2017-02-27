@@ -3,9 +3,9 @@
 
 #encoders dit Symfony d'attendre que les mots de passe dans la base de données seront encodés en bcrypt.
 security:
-    encoders:
-      AppBundle\Entity\User:
-        algorithm: bcrypt
+    #encoders:
+    #  AppBundle\Entity\User:
+    #    algorithm: bcrypt
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
@@ -50,6 +50,10 @@ security:
               target: /
 
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+    role_hierarchy:
+      ROLE_STARTUP: ROLE_USER
+      ROLE_INVESTISSEUR: ROLE_USER
 
     access_control:
       - { path: ^/mon-espace, roles: ROLE_USER }

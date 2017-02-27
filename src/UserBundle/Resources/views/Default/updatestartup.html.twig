@@ -1,0 +1,46 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block body %}
+<div class="padding">
+    <div class="full col-xs-12">
+
+        <!-- content -->
+        <div class="row">
+
+            <!-- main col left -->
+            <div class="col-xs-8 col-lg-8">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {% form_theme form _self 'bootstrap_3_horizontal_layout.html.twig' %}
+                        {{ form_start(form) }}
+                        {{ form_errors(form) }}
+                        {{ form_widget(form) }}
+                    {#  {{  form_row(form.username) }}
+                        {{ form_row(form.lastname) }}
+                        {{ form_row(form.firstname) }}
+                        {{ form_row(form.adress) }}
+                        {{ form_row(form.zipCode) }}
+                        {{ form_row(form.city) }}
+                        {{ form_row(form.country) }}
+                        {% if is_granted('ROLE_STARTUP') %}
+                        {{ form_row(form.compagny) }}
+                        {% endif %}  #}
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a class="btn btn-default btn-block" href="{{ path('user_default_index') }}">Annuler</a>
+                            </div>
+                            <div class="col-xs-6">
+                                <button class="btn btn-warning btn-block">Modifier</button>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

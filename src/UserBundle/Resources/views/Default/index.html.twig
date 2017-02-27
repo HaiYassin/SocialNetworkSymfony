@@ -8,49 +8,91 @@
         <div class="row">
 
             <!-- main col left -->
-            <div class="col-xs-8 col-lg-8">
+            <div class="col-xs-12 col-lg-8">
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading" style='background-image: url("../../../web/assets/unnamed.jpg");
+                                                      background-repeat: no-repeat;
+                                                      background-size: cover;
+                                                      height: 30vh;
+                                                      background-color: #9898ae;'>
                         <div class="pull-right">
-                            <a href="#" class="pull-right">
-                                <i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i>
+                            <a href="{{ path('app_default_create') }}" class="pull-right">
+                                <i class="fa fa-pencil-square fa-2x" style="margin-bottom: 2px" aria-hidden="true"></i>
                             </a>
                         </div>
 
-                        <h1>Mon Espace</h1>
-                        <div id="picture-profil" class="thumbnail">
-                            <a href="#" class="pull-right">
-                                <i class="fa fa-picture-o text-info"" aria-hidden="true"> Changer son image de profil</i>
-                            </a>
-                            <img src="{{ asset(user.path|default('img/apple-touch-icon.png')) }}" class="img-responsive" width="200"/>
-                        </div>
+                        <h1 style="text-shadow: 1px 1px 2px black;
+                                   font-size: 2.9vh;
+                                   background-color: white;
+                                   line-height: inherit;
+                                   margin-top: 6vh;
+                                   color: #3b5999;">Mon TipTopEspace</h1>
+                            <div class="pull-left">
+                                <div id="picture-profil" class="panel" style="padding: 2px;width: 100%;margin-top: 10%;">
+                                    <img src="{{ asset(user.path|default('img/VADOR.jpg')) }}" class="img-responsive" width="100" height="100px"/>
+                                </div>
+                            </div>
+                            <div class="pull-right">
+                                <button type="submit" class="btn btn-default"style="width: 100%;">TipTopContact <i class="fa fa-comment-o" aria-hidden="true"></i></button>
+                                <br>
+                                <button type="submit" class="btn btn-warning" style="margin-top: 2px;width: 100%;">TipTopLike <i class="fa fa-star-o" aria-hidden="true"></i></button>
+                            </div>
 
-
+                                {#<a href="#" class="pull-right">
+                                <i class="fa fa-picture-o text-info" aria-hidden="true"> Changer son image de profil</i>
+                            </a>#}
                     </div>
                     <div class="panel-body">
                         <p class="text-center">Bonjour {{ user.lastname }},</p>
                         <div class="clearfix"></div>
-                        <p>Mail: {{ user.username }}</p>
-                        <hr>
-                        <p>Nom: {{ user.lastname }}</p>
-                        <hr>
-                        <p>Prenom: {{ user.firstname }}</p>
-                        <hr>
-                        <p>Numéro de Tél: </p>
-                        <hr>
-                        <p>Job: </p>
-                        <hr>
-                        <p>Adresse: </p>
-                        <hr>
-                        <p>Pays: </p>
-                        <hr>
-                        <p>Profil: </p>
-                        <hr>
+                            <div class="datauser">
+                                <p>Mail: <span id="test0">{{ user.username }}</span></p>
+                                <hr>
+                                <p>Nom: <span id="test1">{{ user.lastname }}</span></p>
+                                <hr>
+                                <p>Prenom: <span id="test2">{{ user.firstname }}</span></p>
+                                <hr>
+                                <p>Numéro de Tél: <span id="test3"></span></p>
+                                <hr>
+                                <p>Job: <span id="test4"></span></p>
+                                <hr>
+                                {% if is_granted('ROLE_STARTUP') %}
+                                <p>Nom de la Société : <span id="test5">{{ user.compagny }}</span></p>
+                                <hr>
+                                <p>Logo de la Société : <span id="test6"><img src="{{ asset(user.logo50x50|default('img/VADOR.jpg')) }}" width="50px" height="50px"/></p></span>
+                                <hr>
+                                {% endif %}
+                                <p>Adresse: <span id="test7">{{ user.adress }} {{ user.zipCode }} {{  user.city }}</span></p>
+                                <hr>
+                                <p>Pays: <span id="test8">{{ user.country }}</span></p>
+                                <hr>
+                                <p>Twitter:<span id="test9"><a href="https://twitter.com/{{ user.lientwitter}}"> {{ user.lientwitter }} <i class="fa fa-twitter" aria-hidden="true"></i></a></span></p>
+                                <hr>
+                                <p>Profil: <span id="test10">{{ user.role }}</span></p>
+                                <hr>
+                            </div>
                         <ul class="list-unstyled">
                             <li>Dashboard</li>
                             <li>Darkside</li>
                             <li>Greenfield</li>
+                            {{ dump(user) }}
+
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-success" style="width: 40%"></div>
+                                <div class="progress-bar progress-bar-warning" style="width: 20%"></div>
+                                <div class="progress-bar progress-bar-danger" style="width: 40%"></div>
+                            </div>
+                            <br/>
+                            <hr>
+                            <p>Profil compléter à : </p>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-success" id="bartest"></div>
+                            </div>
+                            <progress id="MaBarreProgression" value="0" max="100"></progress>
+                            <br>
+                            <span class="progress-value">Téléchargement 0%</span>
+
                         </ul>
                     </div>
                 </div>
@@ -58,7 +100,7 @@
 
             </div>
 
-                <div class="col-xs-3">
+                <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                                 <a href="{{ path('user_default_password') }}" class="text-center text-warning">
@@ -70,12 +112,95 @@
                                 <i class="fa fa-cog fa-1x" aria-hidden="true"> Modifier mon image de profil</i>
                             </a>
                         </div>
+                        <div class="panel-heading">
+                            {#{% if is_granted('ROLE_USER') %}
+                            <a href="{{ path('user_default_update') }}" class="text-center text-warning">
+                                <i class="fa fa-pencil-square fa-1x" aria-hidden="true"> Modifier mon profil</i>
+                            </a>
+                        {% endif %}#}
+                        {% if is_granted('ROLE_STARTUP') %}
+                            <a href="{{ path('user_default_updatestartup') }}" class="text-center text-warning">
+                                <i class="fa fa-pencil-square fa-1x" aria-hidden="true"> Renseigner votre profil</i>
+                            </a>
+                        {% endif %}
+                        {% if is_granted('ROLE_INVESTISSEUR') %}
+                            <a href="{{ path('user_default_updateinvestisseur') }}" class="text-center text-warning">
+                                <i class="fa fa-pencil-square fa-1x" aria-hidden="true"> Modifier mon profil</i>
+                            </a>
+                        {% endif %}
+                        </div>
+                        {% if is_granted('ROLE_STARTUP') %}
+                            <div class="panel-heading">
+
+                                {% form_theme Postform 'bootstrap_3_layout.html.twig' %}
+                                {{ form_start(Postform) }}
+                                {{ form_errors(Postform) }}
+                                {{ form_widget(Postform) }}
+                                <div class="text-center">
+                                    <button class="btn btn-primart btn-block" type="submit">Poster</button>
+                                </div>
+                                {{ form_end(Postform) }}
+                             </div>
+
+                            {% for user in  user.posts|reverse %}
+                                <div class="panel-heading">
+                                    {{ user.message }}
+                                </div>
+                            {% endfor %}
+
+                                {#{% for  %}
+                                <td>{{  }}</td>
+                                { endfor %}#}
+
+                        {% endif %}
                     </div>
                 </div>
             </div>
 
 
-        </div>
     </div>
 </div>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+
+
+        for (var num = 0; num < 11; num++) {
+
+            if($('#test'+num+'').html() == ""){
+                alert('numero de : #test'+num+' est vide');
+            } else {
+                alert('numero de : #test'+num+' est pas vide');
+                $('#bartest').css("width", "20%");
+            }
+        }
+
+        $(document).ready(function() {
+            var MaBarreProgression = $('#MaBarreProgression'),
+                    max = MaBarreProgression.attr('max'),
+                    time = 100,
+                    value = MaBarreProgression.val();
+
+            var Telechargement = function() {
+                value += 1;
+                addValue = MaBarreProgression.val(value);
+
+                $('.progress-value').html('Téléchargement '+ value + '%');
+
+                if (value == max) {
+                    clearInterval(animation);
+                    $('.progress-value').html('Téléchargement Terminé !');
+                }
+            };
+
+            var animation = setInterval(function() {
+                Telechargement();
+            }, time);
+
+        });
+    </script>
+
+{% endblock %}
+

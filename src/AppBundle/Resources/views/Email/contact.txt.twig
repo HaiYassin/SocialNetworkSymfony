@@ -1,0 +1,14 @@
+{# @var contact \AppBundle\Model\Contact#}
+Bonjour,
+
+Vous venez de recevoir un email de contact.
+
+Sujet : {{ contact.subject }}
+Nom   : {{ contact.name }}
+Email : {{ contact.email }}
+
+{{ contact.message|nl2br }}
+
+Cordialement,
+
+Le site WEB

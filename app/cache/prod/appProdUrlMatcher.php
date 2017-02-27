@@ -30,8 +30,8 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         if (0 === strpos($pathinfo, '/mon-espace')) {
             // user_default_index
             if (rtrim($pathinfo, '/') === '/mon-espace') {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
                     goto not_user_default_index;
                 }
 
@@ -68,6 +68,31 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
 
             }
 
+            if (0 === strpos($pathinfo, '/mon-espace/tiptop-modif-')) {
+                // user_default_updatestartup
+                if ($pathinfo === '/mon-espace/tiptop-modif-startup') {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_user_default_updatestartup;
+                    }
+
+                    return array (  '_controller' => 'UserBundle\\Controller\\DefaultController::updatestartupAction',  '_route' => 'user_default_updatestartup',);
+                }
+                not_user_default_updatestartup:
+
+                // user_default_updateinvestisseur
+                if ($pathinfo === '/mon-espace/tiptop-modif-investisseur') {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_user_default_updateinvestisseur;
+                    }
+
+                    return array (  '_controller' => 'UserBundle\\Controller\\DefaultController::updateinvestisseurAction',  '_route' => 'user_default_updateinvestisseur',);
+                }
+                not_user_default_updateinvestisseur:
+
+            }
+
         }
 
         // app_default_create
@@ -80,17 +105,6 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::createAction',  '_route' => 'app_default_create',);
         }
         not_app_default_create:
-
-        // login
-        if ($pathinfo === '/login') {
-            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                goto not_login;
-            }
-
-            return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::loginAction',  '_route' => 'login',);
-        }
-        not_login:
 
         // app_user_index
         if (rtrim($pathinfo, '/') === '') {
@@ -107,9 +121,23 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         }
         not_app_user_index:
 
-        // logout
-        if ($pathinfo === '/logout') {
-            return array('_route' => 'logout');
+        if (0 === strpos($pathinfo, '/log')) {
+            // login
+            if ($pathinfo === '/login') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_login;
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\UserController::loginAction',  '_route' => 'login',);
+            }
+            not_login:
+
+            // logout
+            if ($pathinfo === '/logout') {
+                return array('_route' => 'logout');
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

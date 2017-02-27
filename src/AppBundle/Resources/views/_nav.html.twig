@@ -11,8 +11,9 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
 
-        <div class="navbar-form navbar-left" style="width: 14%">
-            <a href="#"><img class="img-responsive" src="{{ asset('assets/img/logo_tiptopstartup.png') }}"/></a>
+        <div class="navbar-form navbar-left" >
+            {#<a href="#"><img class="img-responsive" src="{{ asset('assets/img/logo_tiptopstartup.png') }}" width="200px"/></a>#}
+            <a href="#"><h1>ICON SITE WEB</h1></a>
         </div>
 
         {%  if is_granted('IS_AUTHENTICATED_FULLY') %}
@@ -29,11 +30,15 @@
         {% endif %}
         <ul class="nav navbar-nav">
             <li>
-                <a href="{{ path('app_default_create')}}"><i class="glyphicon glyphicon-home"></i> Accueil</a>
+                <a href="{{ path('app_default_create')}}"><i class="glyphicon glyphicon-home"></i> Inscription</a>
             </li>
-            {#<li>
-                <a href="{{ path('app_user_index') }}"><i class="glyphicon glyphicon-home"></i> Inscription</a>
-            </li>#}
+            {%  if is_granted('IS_AUTHENTICATED_FULLY') %}
+                {% if is_granted('ROLE_USER') %}
+            <li>
+                <a href="{{ path('login') }}"><i class="glyphicon glyphicon-home"></i> Accueil</a>
+            </li>
+                {% endif %}
+            {% endif %}
 
             {#      <li>
                         <a href="#"><span class="badge">badge</span></a>
@@ -46,9 +51,6 @@
                     <li>
                         <a href="{{ path('user_default_index') }}"><i class="fa fa-user" aria-hidden="true"></i> Mon Espace</a>
                     </li>
-                    {#    <li class="text-center">
-                            Bonjour {{ app.user.username }}
-                          </li>#}
 
                 {% endif %}
 
@@ -56,18 +58,17 @@
                         <a href="{{ path('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a>
                     </li>
             {% else %}
-                    <li>
-                        {{ include('AppBundle:Security:login.html.twig') }}
+                    <li style="margin-top: 8px;">
+                        {{ include('AppBundle:User:login.html.twig') }}
                     </li>
             {% endif %}
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="">More</a></li>
-                    <li><a href="">More</a></li>
-                    <li><a href="">More</a></li>
-                    <li><a href="">More</a></li>
-                    <li><a href="">More</a></li>
+                    <li><a href="">Qui Sommes-Nous <i class="fa fa-question" aria-hidden="true"></i></a></li>
+                    <li><a href="{{ path('app_user_contact') }}">Contact <i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                    <li><a href="">Newsletter <i class="fa fa-bell" aria-hidden="true"></i></a></li>
+                    <li><a href="">Signaler <i class="fa fa-bullhorn" aria-hidden="true"></i></a></li>
                 </ul>
             </li>
         </ul>

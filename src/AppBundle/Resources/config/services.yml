@@ -1,0 +1,9 @@
+services:
+  app.mailer.mailer:
+    class: AppBundle\Mailer\Mailer
+    arguments:
+      - '%kernel.root_dir%'
+      - '@templating'
+      - '%mailer_from_email%'
+      - '%mailer_to_email%'
+      - '@mailer'

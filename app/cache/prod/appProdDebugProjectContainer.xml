@@ -22,7 +22,7 @@
     <parameter key="kernel.container_class">appProdDebugProjectContainer</parameter>
     <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
-    <parameter key="database_name">xmp</parameter>
+    <parameter key="database_name">tts</parameter>
     <parameter key="database_user">root</parameter>
     <parameter key="database_password">null</parameter>
     <parameter key="mailer_transport">smtp</parameter>
@@ -204,7 +204,14 @@
     <parameter key="security.http_utils.class">Symfony\Component\Security\Http\HttpUtils</parameter>
     <parameter key="security.validator.user_password.class">Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator</parameter>
     <parameter key="security.expression_language.class">Symfony\Component\Security\Core\Authorization\ExpressionLanguage</parameter>
-    <parameter key="security.role_hierarchy.roles" type="collection"/>
+    <parameter key="security.role_hierarchy.roles" type="collection">
+      <parameter key="ROLE_STARTUP" type="collection">
+        <parameter>ROLE_USER</parameter>
+      </parameter>
+      <parameter key="ROLE_INVESTISSEUR" type="collection">
+        <parameter>ROLE_USER</parameter>
+      </parameter>
+    </parameter>
     <parameter key="security.authentication.retry_entry_point.class">Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint</parameter>
     <parameter key="security.channel_listener.class">Symfony\Component\Security\Http\Firewall\ChannelListener</parameter>
     <parameter key="security.authentication.form_entry_point.class">Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint</parameter>
@@ -1735,7 +1742,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5756ed7a7c1759.58890099</argument>
+            <argument>577e33bb57df94.98699088</argument>
           </service>
         </argument>
       </argument>
@@ -1759,8 +1766,9 @@
       <call method="setVoters">
         <argument type="collection">
           <argument type="service">
-            <service class="Symfony\Component\Security\Core\Authorization\Voter\RoleVoter" public="false">
+            <service class="Symfony\Component\Security\Core\Authorization\Voter\RoleHierarchyVoter" public="false">
               <tag name="security.voter" priority="245"/>
+              <argument type="service" id="security.role_hierarchy"/>
             </service>
           </argument>
           <argument type="service">
@@ -1783,7 +1791,14 @@
       </call>
     </service>
     <service id="security.role_hierarchy" class="Symfony\Component\Security\Core\Role\RoleHierarchy" public="false">
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="ROLE_STARTUP" type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument key="ROLE_INVESTISSEUR" type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+      </argument>
     </service>
     <service id="security.firewall" class="Symfony\Component\Security\Http\Firewall">
       <tag name="kernel.event_subscriber"/>
@@ -1995,7 +2010,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5756ed7a7c1759.58890099</argument>
+            <argument>577e33bb57df94.98699088</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2328,11 +2343,11 @@
       <argument type="collection">
         <argument key="driver">pdo_mysql</argument>
         <argument key="host">127.0.0.1</argument>
-        <argument key="port">null</argument>
-        <argument key="dbname">xmp</argument>
+        <argument key="dbname">tts</argument>
         <argument key="user">root</argument>
         <argument key="password">null</argument>
         <argument key="charset">UTF8</argument>
+        <argument key="port">null</argument>
         <argument key="driverOptions" type="collection"/>
         <argument key="defaultTableOptions" type="collection"/>
       </argument>
@@ -2363,6 +2378,12 @@
       <argument type="service">
         <service class="Symfony\Bridge\Doctrine\ContainerAwareEventManager" public="false">
           <argument type="service" id="service_container"/>
+          <call method="addEventListener">
+            <argument type="collection">
+              <argument>loadClassMetadata</argument>
+            </argument>
+            <argument type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
+          </call>
         </service>
       </argument>
       <argument type="collection"/>
@@ -2400,6 +2421,9 @@
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\ORM\Mapping\DefaultEntityListenerResolver"/>
+    <service id="doctrine.orm.default_listeners.attach_entity_listeners" class="Doctrine\ORM\Tools\AttachEntityListenersListener">
+      <tag name="doctrine.event_listener" event="loadClassMetadata"/>
+    </service>
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
       <argument type="collection"/>
@@ -2411,6 +2435,7 @@
           <call method="setEntityNamespaces">
             <argument type="collection">
               <argument key="AppBundle">AppBundle\Entity</argument>
+              <argument key="UserBundle">UserBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2431,10 +2456,23 @@
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
                         <argument>C:\wamp\www\XMP\src\AppBundle\Entity</argument>
+                        <argument>C:\wamp\www\XMP\src\UserBundle\Entity</argument>
                       </argument>
                     </service>
                   </argument>
                   <argument>AppBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service" id="annotation_reader"/>
+                      <argument type="collection">
+                        <argument>C:\wamp\www\XMP\src\AppBundle\Entity</argument>
+                        <argument>C:\wamp\www\XMP\src\UserBundle\Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>UserBundle\Entity</argument>
                 </call>
               </service>
             </argument>
@@ -2471,6 +2509,15 @@
       </argument>
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
       <configurator service="doctrine.orm.default_manager_configurator" method="configure"/>
+    </service>
+    <service id="doctrine.orm.default_entity_manager.property_info_extractor" class="Symfony\Bridge\Doctrine\PropertyInfo\DoctrineExtractor">
+      <tag name="property_info.list_extractor" priority="-1001"/>
+      <tag name="property_info.type_extractor" priority="-999"/>
+      <argument type="service">
+        <service class="Doctrine\Common\Persistence\Mapping\ClassMetadataFactory" public="false">
+          <factory service="doctrine.orm.default_entity_manager" method="getMetadataFactory"/>
+        </service>
+      </argument>
     </service>
     <service id="sensio_framework_extra.view.guesser" class="Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser">
       <argument type="service" id="kernel"/>
@@ -2647,10 +2694,10 @@
     </service>
     <service id="security.encoder_factory" class="Symfony\Component\Security\Core\Encoder\EncoderFactory">
       <argument type="collection">
-        <argument key="AppBundle\Entity\User" type="collection">
+        <argument key="Symfony\Component\Security\Core\User\UserInterface" type="collection">
           <argument key="class">%security.encoder.bcrypt.class%</argument>
           <argument key="arguments" type="collection">
-            <argument>13</argument>
+            <argument>12</argument>
           </argument>
         </argument>
       </argument>

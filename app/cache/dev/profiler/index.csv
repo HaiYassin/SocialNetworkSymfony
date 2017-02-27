@@ -1,0 +1,12 @@
+73b3d7,::1,GET,http://localhost/socialnetworksymfony/web/app_dev.php/,1488159567,,200
+a57836,::1,POST,http://localhost/socialnetworksymfony/web/app_dev.php/,1488159576,,302
+065492,::1,GET,http://localhost/socialnetworksymfony/web/app_dev.php/,1488159578,,200
+2be792,::1,GET,http://localhost/socialnetworksymfony/web/app_dev.php/inscription,1488159581,,200
+0a5d31,::1,POST,http://localhost/socialnetworksymfony/web/app_dev.php/inscription,1488159605,,200
+57a34d,::1,POST,http://localhost/socialnetworksymfony/web/app_dev.php/,1488159615,,302
+90948b,::1,GET,http://localhost/socialnetworksymfony/web/app_dev.php/,1488159615,,200
+151973,::1,GET,http://localhost/socialnetworksymfony/web/app_dev.php/mon-espace/,1488159618,,200
+b44f59,::1,GET,http://localhost/socialnetworksymfony/web/app_dev.php/inscription,1488159623,,200
+361f6b,::1,GET,http://localhost/socialnetworksymfony/web/app_dev.php/mon-espace/,1488159626,,200
+5998d3,::1,POST,http://localhost/socialnetworksymfony/web/app_dev.php/mon-espace/,1488159632,,302
+d2964d,::1,GET,http://localhost/socialnetworksymfony/web/app_dev.php/mon-espace/,1488159632,,200

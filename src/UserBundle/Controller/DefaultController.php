@@ -3,8 +3,12 @@
 namespace UserBundle\Controller;
 
 use AppBundle\Entity\User;
+use UserBundle\Entity\Post;
+use UserBundle\Form\ModifprofilType;
+use UserBundle\Form\ModifprofilUserType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use UserBundle\Form\PhotoprofilType;
+use UserBundle\Form\PostArticlesType;
 use UserBundle\Form\UserPasswordType;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -20,24 +24,45 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
+     *@param Request $request
      *
      * @return array
      * @Route()
-     * @Method("GET")
+     * @Method("GET|POST")
      * @Template()
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        $post = new Post();
+
         $user = $this->getUser();
+        $post->setUser($user);
 
-        $em = $this->getDoctrine()->getManager();
+        $form = $this->createForm(PostArticlesType::class, $post);
 
-        return[
+
+        if ($form->handleRequest($request)->isValid()){
+
+
+            $em = $this->getDoctrine()->getManager();
+
+
+            $em->persist($post);
+
+            $em->flush();
+
+            $this->addFlash('success', 'Article posté !');
+
+            return $this->redirectToRoute('user_default_index');
+        }
+
+        return [
+            'Postform' => $form->createView(),
+            'message' => $post,
             'user' => $user,
         ];
-
-
     }
+
 
     /**
      * Password
@@ -55,36 +80,16 @@ class DefaultController extends Controller
         $user = $this->getUser();
         $form = $this->createForm(UserPasswordType::class, $user);
         if ($form->handleRequest($request)->isValid()) {
-            // Si le formulaire est valide, on demande à Doctrine
-            // de tout enregistrer en base de données.
 
             $this->encode($user);
 
             $this->getDoctrine()->getManager()->flush();
 
-            // On ajoute un message Flash pour signaler à l'utilisateur
-            // que tout s'est bien passé.
             $this->addFlash('success', 'Mot de passe modifié !');
 
-            // On redirige l'utilisateur vers la page nommée "admin_student_index"
-            // Ce qui correspond dans notre cas à la liste des students :
-            //
-            //     admin   : AdminBundle
-            //     student : StudentController
-            //     index   : indexAction
             return $this->redirectToRoute('user_default_index');
         }
 
-        // On retourne les variables pour Twig. Ici
-        // on met donc à disposition une variable nommée
-        // "student" contenant la student à modifier
-        // et une autre nommée "form" contenant le
-        // formulaire de création.
-        //
-        // Attention : avant d'envoyer un formulaire à Twig
-        // on appelle toujours la méthode createView
-        //
-        //     $form->createView()
         return [
             'form' => $form->createView(),
         ];
@@ -108,63 +113,103 @@ class DefaultController extends Controller
 
         $form = $this->createForm(PhotoprofilType::class, $user);
         if ($form->handleRequest($request)->isValid()) {
-            // Si le formulaire est valide, on demande à Doctrine
-            // de tout enregistrer en base de données.
 
             $this->upload($user);
 
             $this->getDoctrine()->getManager()->flush();
 
-            // On ajoute un message Flash pour signaler à l'utilisateur
-            // que tout s'est bien passé.
             $this->addFlash('success', 'Image modifié !');
 
             $user->setFile(null);
 
-            // On redirige l'utilisateur vers la page nommée "admin_student_index"
-            // Ce qui correspond dans notre cas à la liste des students :
-            //
-            //     admin   : AdminBundle
-            //     student : StudentController
-            //     index   : indexAction
             return $this->redirectToRoute('user_default_index');
         }
 
-        // On retourne les variables pour Twig. Ici
-        // on met donc à disposition une variable nommée
-        // "student" contenant la student à modifier
-        // et une autre nommée "form" contenant le
-        // formulaire de création.
-        //
-        // Attention : avant d'envoyer un formulaire à Twig
-        // on appelle toujours la méthode createView
-        //
-        //     $form->createView()
         return [
             'form' => $form->createView(),
         ];
 
     }
 
+
+    /**
+     * updateStartup
+     *
+     * @param Request $request
+     *
+     * @return array
+     * @Route("/tiptop-modif-startup")
+     * @Method("GET|POST")
+     * @Template()
+     */
+    public function updatestartupAction(Request $request)
+    {
+        $user = $this->getUser();
+
+            $form = $this->createForm(ModifprofilType::class, $user);
+            if ($form->handleRequest($request)->isValid()) {
+
+                $this->upload50x50($user);
+
+                $this->getDoctrine()->getManager()->flush();
+
+                $this->addFlash('success', 'Données sont modifiées !');
+
+                $user->setFile(null);
+
+                return $this->redirectToRoute('user_default_index');
+            }
+
+        return [
+            'form' => $form->createView(),
+        ];
+
+    }
+
+    /**
+     * updateStartup
+     *
+     * @param Request $request
+     *
+     * @return array
+     * @Route("/tiptop-modif-investisseur")
+     * @Method("GET|POST")
+     * @Template()
+     */
+    public function updateinvestisseurAction(Request $request)
+    {
+        $user = $this->getUser();
+
+        $form = $this->createForm(ModifprofilUserType::class, $user);
+        if ($form->handleRequest($request)->isValid()) {
+
+            $this->upload($user);
+
+            $this->getDoctrine()->getManager()->flush();
+
+            $this->addFlash('success', 'Données sont modifiées !');
+
+            $user->setFile(null);
+
+            return $this->redirectToRoute('user_default_index');
+        }
+
+        return [
+            'form' => $form->createView(),
+        ];
+
+    }
+
+
     private function encode(User $user)
     {
-        //on recupére le service encoder mot de passe de symfony
         $encoder = $this->get('security.password_encoder');
 
-        // on demande à l'encoder d'encoder le mot de passe :
-        // -on donne l'étudiant pour qu'il sache comment l'encoder
-        //  voir security.yml (clé encoders)
-        // -on donne le mdp en clair
         $encoded = $encoder->encodePassword(
             $user,
             $user->getRawPassword()
         );
 
-        /*   dump($encoded);
-           dump($student->getRawPassword());
-           die;*/
-
-        //on enrengistre le mdp encodé dans l'entité User
         $user->setPassword($encoded);
     }
 
@@ -175,29 +220,51 @@ class DefaultController extends Controller
      * @param User $user
      */
     private function upload(User $user){
-        //kernel.root_dir indique le chemin complet depuis la racine
-        //
         if (null !== $file = $user->getFile()) {
             $appPath = $this->getParameter('kernel.root_dir');
 
-            //on charge le chemin vers web/
             $webPath = $appPath . '/../web/';
 
-            //on charge le fichier img/
             $imgProjetPath = $webPath . '/img/photoprofil';
 
             if (null === $currentPath = $user->getPath()){
-                //nom de fichier
                 $filename = uniqid() . '.' . $file->getClientOriginalExtension();
             } else {
                 $filename = basename($webPath . $currentPath);
             }
 
-            //move 2 arguments : 1 lieu, 2 le nom
-            //on deplace notre fichier vers le bon nom
             $file->move($imgProjetPath, $filename);
 
             $user->setPath('img/photoprofil/' . $filename);
+        }
+
+    }
+
+
+    /**
+     * Upload file
+     * Student = Objet attendu dans cette fonction
+     *
+     * @param User $user
+     */
+    private function upload50x50(User $user){
+        if (null !== $file = $user->getFile()) {
+            $appPath = $this->getParameter('kernel.root_dir');
+
+            $webPath = $appPath . '/../web/';
+
+            $logo50x50ProjetPath = $webPath . '/img/logo/50x50';
+
+            if (null === $currentPath = $user->getLogo50x50()){
+
+                $filename = uniqid() . '.' . $file->getClientOriginalExtension();
+            } else {
+                $filename = basename($webPath . $currentPath);
+            }
+            
+            $file->move($logo50x50ProjetPath, $filename);
+
+            $user->setLogo50x50('img/logo/50x50/' . $filename);
         }
 
     }

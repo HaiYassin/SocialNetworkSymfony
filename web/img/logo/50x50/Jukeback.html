@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://www.jukeback.com/ -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}</style><style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:black;text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}</style><link type="text/css" rel="stylesheet" href="./Jukeback_files/css"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}.gm-style img{max-width:none}</style>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Diffusion musicale">
+  <meta name="keywords" content="">
+  <meta name="author" content="Smartfizz">
+
+  <meta name="google-site-verification" content="">
+  <link rel="profile" href="http://gmpg.org/xfn/11">
+
+  <link rel="canonical" href="http:">
+  <link rel="shortlink" href="http:">
+
+  <title>Jukeback</title>
+
+  <!-- Fonts -->
+  <link href="./Jukeback_files/css(1)" rel="stylesheet" type="text/css">
+  <link href="./Jukeback_files/css(2)" rel="stylesheet" type="text/css">
+  <link href="./Jukeback_files/css(3)" rel="stylesheet" type="text/css">
+
+  <!-- jQuery library (served from Google) -->
+  <script id="twitter-wjs" src="./Jukeback_files/widgets.js"></script><script src="./Jukeback_files/jquery.min.js"></script>
+
+  <!-- Google maps -->
+  <script type="text/javascript" src="./Jukeback_files/js"></script>
+  <!-- Configuration Google Maps -->
+  <script type="text/javascript">
+   // When the window has finished loading create our google map below
+   google.maps.event.addDomListener(window, 'load', init);
+
+   function init() {
+       // Basic options for a simple Google Map
+       // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+       var mapOptions = {
+           // How zoomed in you want the map to start at (always required)
+           zoom: 8,
+
+           // The latitude and longitude to center the map (always required)
+           center: new google.maps.LatLng(48.5,6.5), // France, Lorraine, Nancy
+
+           // How you would like to style the map.
+           // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{
+                      "featureType":"administrative",
+                      "elementType":"geometry.stroke",
+                      "stylers":[{
+                        "visibility":"off" },{
+                        "color":"#000000" },{
+                        "weight":"2" },{
+                        "saturation":"0" },{
+                        "lightness":"0" },{
+                        "gamma":"1" }
+                      ]},{
+                        "featureType":"administrative.country",
+                        "elementType":"geometry.stroke",
+                        "stylers":[{
+                          "visibility":"on" },{
+                          "color":"#fa322d" },{
+                          "weight":"2" },{
+                          "saturation":"0" },{
+                          "lightness":"0" },{
+                          "gamma":"1" }
+                      ]},{
+                        "featureType":"administrative",
+                        "elementType":"labels.text.fill",
+                        "stylers":[{
+                          "visibility":"on" },{
+                          "color":"#ffffff"},{
+                          "saturation":"0"},{
+                          "lightness":"0"}
+                      ]},{
+                        "featureType":"administrative",
+                        "elementType":"labels.text.stroke",
+                        "stylers":[{
+                        "color":"#291f27"},{
+                        "visibility":"on"},{
+                        "weight":"6"},{
+                        "saturation":"0"},{
+                        "lightness":"0"}
+                      ]},{
+                        "featureType":"administrative",
+                        "elementType":"labels.icon",
+                        "stylers":[{
+                          "visibility":"on"},{
+                          "color":"#d8cdc0"},{
+                          "weight":"1"}
+                      ]},{
+                        "featureType":"landscape",
+                        "elementType":"all",
+                        "stylers":[{
+                          "visibility":"simplified"},{
+                          "color":"#291f27"},{
+                          "saturation":"0"},{
+                          "lightness":"0"}
+                      ]},{
+                        "featureType":"poi",
+                        "elementType":"all",
+                        "stylers":[{
+                          "visibility":"off"}
+                      ]},{
+                        "featureType":"road",
+                        "elementType":"all",
+                        "stylers":[{
+                          "color":"#291f27"},{
+                          "visibility":"simplified"},{
+                          "weight":"0.5"},{
+                          "saturation":"0"},{
+                          "lightness":"5"},{
+                          "gamma":"1"}
+                      ]},{
+                        "featureType":"road.highway",
+                        "elementType":"all",
+                        "stylers":[{
+                          "color":"#291f27"},{
+                          "visibility":"simplified"},{
+                          "weight":"1"},{
+                          "saturation":"0"},{
+                          "lightness":"10"},{
+                          "gamma":"1"}
+                      ]},{
+                        "featureType":"road",
+                        "elementType":"labels.text",
+                        "stylers":[{
+                          "visibility":"on"},{
+                          "color":"#d8cdc0"},{
+                          "weight":5},{
+                          "saturation":"0"},{
+                          "lightness":"0"}
+                      ]},{
+                        "featureType":"road",
+                        "elementType":"labels.text.fill",
+                        "stylers":[{
+                          "visibility":"on"},{
+                          "color":"#0096aa"},{
+                          "weight":8},{
+                          "lightness":"5"},{
+                          "gamma":"1"},{
+                          "saturation":"-75"}
+                        ]},{
+                          "featureType":"road",
+                          "elementType":"labels.icon",
+                          "stylers":[{
+                            "visibility":"off"}
+                        ]},{
+                          "featureType":"transit",
+                          "elementType":"all",
+                          "stylers":[{
+                            "visibility":"off"},{
+                            "color":"#0096aa"},{
+                            "saturation":"-75"},{
+                            "lightness":"5"},{
+                            "gamma":"1"}
+                          ]},{
+                            "featureType":"water",
+                            "elementType":"geometry.fill",
+                            "stylers":[{
+                              "visibility":"on"},{
+                              "color":"#d8cdc0"},{
+                              "saturation":"0"},{
+                              "lightness":"0"}
+                          ]},{
+                            "featureType":"water",
+                            "elementType":"labels.text",
+                            "stylers":[{
+                              "visibility":"off"},{
+                              "color":"#fa322d"},{
+                              "saturation":"-28"},{
+                              "lightness":"0"}
+                          ]},{
+                            "featureType":"water",
+                            "elementType":"labels.icon",
+                            "stylers":[{
+                              "visibility":"off"}]
+                          }]
+       };
+
+       // Get the HTML DOM element that will contain your map
+       // We are using a div with id="map" seen below in the <body>
+       var mapElement = document.getElementById('mapJukeback');
+
+       // Create the Google Map using our element and options defined above
+       var map = new google.maps.Map(mapElement, mapOptions);
+
+       var infowindow = new google.maps.InfoWindow();
+
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.6903602,6.1849755),
+               map: map,
+               title: 'Le Mouton Électrique',
+               content: '<img src="https://play.jukeback.com//public/upload/flyer_6066775b09c718-70a6-4bcc-acc1-02aa09cce26b.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Le Mouton Électrique</h3><h4 class="map_popup_adresse">Rue de la Primatiale, 54000 Nancy</h4><h5 class="map_popup_theme">Thème : Éclectrique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(49.1876677,6.9033489),
+               map: map,
+               title: 'Le Carré Mauve',
+               content: '<img src="https://play.jukeback.com//public/upload/11009900_10153845718485620_8784449157952958254_nbfb5d852-75f9-4a1a-ae86-16b003ce17f7.png" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Le Carré Mauve</h3><h4 class="map_popup_adresse">44 L Rue Nationale, 57600 Forbach</h4><h5 class="map_popup_theme">Thème : Lounge</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(47.6352682,6.8534692),
+               map: map,
+               title: 'Le Lion des Flandres',
+               content: '<img src="https://play.jukeback.com//public/upload/logoflandres4b1f6880-3272-4787-a755-c84cdddaf065.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Le Lion des Flandres</h3><h4 class="map_popup_adresse">70 Faubourg de France, 90000 Belfort</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(49.12551,6.726072),
+               map: map,
+               title: 'Bowling Center',
+               content: '<img src="https://play.jukeback.com//public/upload/bowling-center071245df-5f79-4b1d-ac59-6d1d22b37032.png" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Bowling Center</h3><h4 class="map_popup_adresse">94 rue du Général Altmayer, 57500 Saint-Avold</h4><h5 class="map_popup_theme">Thème : Hits musicaux</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.17581,6.443237),
+               map: map,
+               title: 'Le Manhattan',
+               content: '<img src="https://play.jukeback.com//public/upload/le-manhattanc2d68549-7567-41d1-a09a-ad4b41ca87bf.png" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Le Manhattan</h3><h4 class="map_popup_adresse">23 rue des Etats Unis, 88000 Épinal</h4><h5 class="map_popup_theme">Thème : Eclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(47.748723,7.341678),
+               map: map,
+               title: 'Café Montaigne',
+               content: '<img src="https://www.jukeback.com/img/cover_bar.png" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Café Montaigne</h3><h4 class="map_popup_adresse">36 rue de la Meurthe, Mulhouse</h4><h5 class="map_popup_theme">Thème : Pop/Rock/Électro</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.5837645,7.7475034),
+               map: map,
+               title: 'Le Schluch',
+               content: '<img src="https://play.jukeback.com//public/upload/carte-visite-schluch-20149f95bb8e-9a3f-4b8f-946b-635cc567a425.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Le Schluch</h3><h4 class="map_popup_adresse">3 Rue de l\'Outre, 67000 Strasbourg</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.2595795,7.4538592),
+               map: map,
+               title: 'Brasserie Le Fox',
+               content: '<img src="https://play.jukeback.com//public/upload/lefoxe791f832-bd61-46d2-b700-3930d2bceda5.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Brasserie Le Fox</h3><h4 class="map_popup_adresse">2 Place d\'Armes, 67600 Sélestat</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.694224,6.198462),
+               map: map,
+               title: 'Jukeback',
+               content: '<img src="https://play.jukeback.com//public/upload/logo-jukeback-blanc-carre-500x5009c209577-0dec-48cc-afec-1e09a008f01b.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Jukeback</h3><h4 class="map_popup_adresse">Nancy</h4><h5 class="map_popup_theme">Thème : Aousse</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(47.6219411,6.1581006),
+               map: map,
+               title: 'Planète Foot',
+               content: '<img src="https://www.jukeback.com/img/cover_bar.png" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Planète Foot</h3><h4 class="map_popup_adresse">1, place Pierre Renet, 70000 Vesoul</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.5788791,7.7396583),
+               map: map,
+               title: 'Pub Mac\'Carthy',
+               content: '<img src="https://play.jukeback.com//public/upload/macstrasa29f2785-5487-4d47-a752-d7752d3d64de.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Pub Mac\'Carthy</h3><h4 class="map_popup_adresse">6 Rue des Glacières, 67000 Strasbourg</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(47.683741,6.5142495),
+               map: map,
+               title: 'Manhattan Lure',
+               content: '<img src="https://www.jukeback.com/img/cover_bar.png" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Manhattan Lure</h3><h4 class="map_popup_adresse">10 Rue de Froideterre, 70200 Lure</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(49.1097555,7.0695398),
+               map: map,
+               title: 'La Brasserie Des Arts',
+               content: '<img src="https://play.jukeback.com//public/upload/39070_134355016606934_49438_n347008bc-d4fe-4773-9ee0-8a7f3b440c24.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">La Brasserie Des Arts</h3><h4 class="map_popup_adresse">10 Rue Poincaré, 57200 Sarreguemines</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(49.1137218,6.1723772),
+               map: map,
+               title: 'Le Shannon',
+               content: '<img src="https://play.jukeback.com//public/upload/_wsb_478x387_Capture77c84ec5-5815-42a4-ada2-ef918468d73d.PNG" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Le Shannon</h3><h4 class="map_popup_adresse">19 Avenue Robert Schuman, 57000 Metz</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.8182927,7.7869528),
+               map: map,
+               title: 'Le Lodge',
+               content: '<img src="https://play.jukeback.com//public/upload/1654223_1032019440202568_51110460441855893_nafc39efd-2d9b-4119-929d-179ae0b2ce1f.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Le Lodge</h3><h4 class="map_popup_adresse">5 Marché aux Bestiaux, 67500 Haguenau</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.6846695,6.1791494),
+               map: map,
+               title: 'Le Shakespeare Nancy',
+               content: '<img src="https://play.jukeback.com//public/upload/1380132_1403336753233171_602279248_n12fbd3cd-0798-4fc3-a42f-96656e5bfb5c.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Le Shakespeare Nancy</h3><h4 class="map_popup_adresse">10 Rue de Mon Désert, 54000 Nancy</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(49.1980752,6.6847863),
+               map: map,
+               title: 'Café Pizzeria du Lac',
+               content: '<img src="https://play.jukeback.com//public/upload/extraterrestre2afe3cc4-c1f6-442c-b1af-dcff2010dd6c.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Café Pizzeria du Lac</h3><h4 class="map_popup_adresse">118 rue de la Gare, 57150 Creutzwald</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(49.1118674,7.31654),
+               map: map,
+               title: 'Bar Black & White',
+               content: '<img src="https://play.jukeback.com//public/upload/11258152_336034396520597_3339358804117092802_n5a0a4fad-f3ec-4d7b-b3c9-d6ebfeefcecf.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Bar Black & White</h3><h4 class="map_popup_adresse">66 rue de Weiskirch, Epping</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.9515045,7.6412924),
+               map: map,
+               title: 'La Coupole',
+               content: '<img src="https://www.jukeback.com/img/cover_bar.png" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">La Coupole</h3><h4 class="map_popup_adresse">1 Rue de la Republique, 67110 Niederbronn-les-Bains</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.6924068,6.1778064),
+               map: map,
+               title: 'SmartFizz',
+               content: '<img src="https://www.jukeback.com/img/cover_bar.png" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">SmartFizz</h3><h4 class="map_popup_adresse"></h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.5386979,7.4895668),
+               map: map,
+               title: 'Le Bodega',
+               content: '<img src="https://play.jukeback.com//public/upload/10455335_573681589426413_8880728495785243108_n092f1b73-465e-4aff-a1a1-49d9a377b177.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Le Bodega</h3><h4 class="map_popup_adresse">1 Rue de Strasbourg, 67120 Molsheim</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(48.6899714,6.1843847),
+               map: map,
+               title: 'La Quincaillerie',
+               content: '<img src="https://play.jukeback.com//public/upload/qncy515b339b-791d-42ff-b879-e9d6c0fb280c.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">La Quincaillerie</h3><h4 class="map_popup_adresse">2 Rue Saint-Nicolas, 54000 Nancy</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+               // Let's also add a marker while we're at it
+           var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(47.6381331,6.8550074),
+               map: map,
+               title: 'Bowling des 4 As',
+               content: '<img src="https://play.jukeback.com//public/upload/bowlingbelfort253beb97-33cf-4241-829d-74e056e15c09.jpg" style="border:2px solid #d8cdc0;height:75px;"/><h3 class="map_popup_nom">Bowling des 4 As</h3><h4 class="map_popup_adresse">Centre commercial 4 As, 90000 Belfort</h4><h5 class="map_popup_theme">Thème : Éclectique</h5>',
+               icon: 'https://www.jukeback.com/img/icon_marker_jk.png'
+          });
+
+           google.maps.event.addListener(marker, 'click', function() {
+                       infowindow.setContent(this.content);
+                       infowindow.open(map, this);
+                     });
+       }
+  </script>
+
+  <!-- CSS Bootstrap modifié : http://getbootstrap.com/customize/?id=b4013cda7640763edb76
+  @grid-float-breakpoint > 1200px
+  -->
+  <link href="./Jukeback_files/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Lightbox -->
+  <link rel="stylesheet" href="./Jukeback_files/lightbox.css">
+
+  <!-- Animate -->
+  <link rel="stylesheet" href="./Jukeback_files/animate.css">
+
+  <!-- bxSlider Javascript file -->
+  <!-- <script src="js/jquery.bxslider.min.js"></script> -->
+  <script src="./Jukeback_files/jquery.bxslider-rahisified.min.js"></script><!-- bxslider retouché pour responsive design -->
+  <!-- bxSlider CSS file -->
+  <link href="./Jukeback_files/jquery.bxslider.css" rel="stylesheet">
+
+  <!-- CSS Global -->
+  <link href="./Jukeback_files/style.css" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="https://www.jukeback.com/img/apple-touch-icon.png">
+  <link rel="icon" href="https://www.jukeback.com/img/favicon.ico">
+
+<script type="text/javascript" charset="utf-8" async="" src="./Jukeback_files/timeline.1de68eca487d0f8716b7f8b1abf6b94e.js"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/map.js"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/marker.js"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/onion.js"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/ViewportInfoService.GetViewportInfo"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/stats.js"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/controls.js"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/AuthenticationService.Authenticate"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/vt"></script><script type="text/javascript" charset="UTF-8" src="./Jukeback_files/QuotaService.RecordEvent"></script></head>
+<body data-spy="scroll" data-target="#navbar" style="position:relative;">
+  
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://www.jukeback.com/"><img src="./Jukeback_files/logo-jukeback.png" height="30" alt="Jukeback"></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div id="navbar" class="navbar-right navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="https://www.jukeback.com/">Accueil</a></li>
+        <li><a class="scrolla" href="https://www.jukeback.com/#jukeback">Qu'est-ce que Jukeback ?</a></li>
+        <li><a class="scrolla" href="https://www.jukeback.com/#commander">Commandez votre Jukeback !</a></li>
+        <!-- <li><a class="scrolla" href="#faq">FAQ</a></li> -->
+        <li><a class="scrolla" href="https://www.jukeback.com/#presse">Presse</a></li>
+        <li><a class="scrolla" href="https://www.jukeback.com/#trouverjukeback">Où nous trouver ?</a></li>
+        <li><a class="fb-tw" href="https://www.facebook.com/jukebackofficiel/" target="_blank" title="Retrouvez Jukeback sur Facebook"><span style="background:#FFFFFF;color:#291f26;border-radius:15px 15px 15px 15px;padding:5px;font-weight:bold;font-size:0.8em;"><img src="./Jukeback_files/fb_icon.png" style="margin-top:-1px;"> ♥</span> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Facebook</span></a></li>
+        <li><a class="fb-tw" href="https://twitter.com/jukeback_off" target="_blank" title="Retrouvez Jukeback sur Twitter"><img src="./Jukeback_files/tw_icon.png"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Twitter</span></a></li>
+        <li><a class="fb-tw" href="https://www.instagram.com/jukebackofficiel/" target="_blank" title="Retrouvez Jukeback sur Instagram"><img src="./Jukeback_files/instagram_icon.png"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Instagram</span></a></li>
+        <!-- <li><a class="fb-tw" href="http://whyd.com/u/568a7a594bf212908fb65f05" target="_blank" title="Retrouvez Jukeback sur Whyd"><img src="img/whyd_icon.png"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Whyd</span></a></li> -->
+        <li><a class="fb-tw" href="https://soundsgood.co/me/curator/jukeback" target="_blank" title="Retrouvez Jukeback sur Soundsgood"><img src="./Jukeback_files/soundsgood_icon.png"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Soundsgood</span></a></li>
+        <li><a class="fb-tw" href="http://www.deezer.com/profile/901317035" target="_blank" title="Retrouvez Jukeback sur Deezer"><img src="./Jukeback_files/deezer_icon.png" height="20px"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Deezer</span></a></li>
+        <li><a class="fb-tw" href="http://open.spotify.com/user/jukeback/" target="_blank" title="Retrouvez Jukeback sur Spotify"><img src="./Jukeback_files/spotify_icon.png" height="20px"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Spotify</span></a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+<div class="fullscreen background parallax hidden-xs not-overflow" style="background-image: url(&quot;img/background_jukeback_01_bis.jpg&quot;); background-attachment: fixed; background-size: 1349px 897.085px; background-position: 50% -149.043px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+  <div class="content-a">
+    <div class="content-b" style="background:url(&#39;img/quadrillage.png&#39;);text-align:center;color:#FFFFFF;">
+      <div style="background:url(&#39;img/background-jukeback-ombres.png&#39;) no-repeat left center;width:296px;margin:0 auto;text-align:left;">
+        <img src="./Jukeback_files/vinyle.png" class="vinyle" alt="" style="">
+      </div>
+      <h3 style="font-family:sans-serif;text-shadow:3px 3px 5px rgba(0,0,0,0.3),-3px 3px 5px rgba(0,0,0,0.3),3px -3px 5px rgba(0,0,0,0.3),-3px -3px 5px rgba(0,0,0,0.3);">Solution interactive de diffusion musicale</h3>
+      <div class="wow fadeInDown animated" style="text-align: center; visibility: visible; animation-name: fadeInDown;">
+        <a href="https://www.jukeback.com/#commander" class="scrolla" style="padding:10px 20px;border-radius:3px;background:#fa322d;color:#FFFFFF;line-height:60px;text-transform:uppercase;font-family:Paytone One;">Commandez votre Jukeback</a>
+      </div>
+      <div class="wow fadeInDown animated" style="text-align: center; margin-bottom: 5vh; visibility: visible; animation-name: fadeInDown;">
+        <a href="https://www.jukeback.com/#jukeback" class="scrolla" style="padding:10px 20px;border-radius:3px;background:rgba(255,255,255,0.3);color:#FFFFFF;border:1px solid #FFFFFF;line-height:60px;text-transform:uppercase;font-family:Paytone One;text-shadow:0 0 3px #291f27;box-shadow:0 0 3px #291f27,inset 0 0 3px #291f27;">Découvrir Jukeback</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<img src="./Jukeback_files/background_jukeback_01_bis.jpg" style="width:100%;height:auto;" class="hidden-lg hidden-md hidden-sm">
+
+
+<div class="ancre_hidden" id="jukeback">&nbsp;</div>
+
+<div class="actualite">
+  <div class="container all_arguments">
+    <div id="bx-pager">
+        <ul>
+                      <li><a class="hidden-sm hidden-xs" data-slide-index="0" href="https://www.jukeback.com/">Légendaire</a></li>
+                      <li><a class="hidden-sm hidden-xs" data-slide-index="1" href="https://www.jukeback.com/">De qualité</a></li>
+                      <li><a class="hidden-sm hidden-xs" data-slide-index="2" href="https://www.jukeback.com/">Pratique</a></li>
+                      <li><a class="hidden-sm hidden-xs" data-slide-index="3" href="https://www.jukeback.com/">Communiquant</a></li>
+                      <li><a class="hidden-sm hidden-xs active" data-slide-index="4" href="https://www.jukeback.com/">Personnalisable</a></li>
+                      <li><a class="hidden-sm hidden-xs" data-slide-index="5" href="https://www.jukeback.com/">Économique</a></li>
+                  </ul>
+    </div>
+
+  <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
+      <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 402px;"><ul class="bxslider" style="width: 815%; position: relative; transition-duration: 1.5s; transform: translate3d(-5550px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 1110px;" class="bx-clone">
+
+            <!---------------->
+            <div class="row argument" data-wow-delay="0s">
+              <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+                <img src="./Jukeback_files/icon_rapporte.png">
+                <h4>L'astuce</h4>
+                <p>Offrez de la musique à vos meilleurs clients grâce à un système de jetons.</p>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+                <h1>Jukeback vous rapporte !</h1>
+                <h2>Augmentez votre chiffre d'affaires !</h2>
+                <p>L'offre Jukeback comprend <strong>la location, l'assistance et la maintenance</strong>.
+<strong>Récupérez la totalité des dépenses de vos clients</strong> via le monnayeur de la borne Jukeback.
+<strong>Renforcez l'attractivité</strong> de votre bar et ainsi <strong>le volume de consommation</strong> de votre clientèle.</p>
+                <p class="text-option"></p>
+              </div>
+            </div>
+            <!---------------->
+
+          </li>
+                  <li style="float: left; list-style: none; position: relative; width: 1110px;">
+
+            <!---------------->
+            <div class="row argument" data-wow-delay="0s">
+              <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+                <img src="./Jukeback_files/icon_mythe.png">
+                <h4>Le plus</h4>
+                <p>La borne tactile crée un espace de rencontres original.</p>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+                <h1>Jukeback signe le retour d'un mythe !</h1>
+                <h2>Le nouvel outil ludique</h2>
+                <p>Jukeback permet à vos clients de <strong>participer à l'ambiance musicale</strong> de votre établissement.
+<strong>Des jeux</strong> proposés offrent une <strong>interactivité</strong> entre vos barmans et votre clientèle.
+Grâce à l'<strong>application mobile*</strong>, vos clients peuvent récupérer les <strong>informations</strong> sur les <strong>chansons diffusées</strong> et <strong>voter</strong> pour ces dernières.</p>
+                <p class="text-option"></p>
+              </div>
+            </div>
+            <!---------------->
+
+          </li>
+                  <li style="float: left; list-style: none; position: relative; width: 1110px;">
+
+            <!---------------->
+            <div class="row argument" data-wow-delay="0s">
+              <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+                <img src="./Jukeback_files/icon_borne.png">
+                <h4>L'astuce</h4>
+                <p>L'installation est réalisée par un professionnel et elle ne prend que quelques minutes.</p>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+                <h1>Jukeback est conçu pour vous !</h1>
+                <h2>Élaboré spécialement pour les lieux agités</h2>
+                <p>La <strong>borne tactile</strong> est <strong>robuste</strong>, parée d'une vitre de <strong>protection sécurisée</strong> et conçue pour <strong>gérer les éclaboussures</strong>.
+Bien pensée et avec ses dimensions limitées, la borne jukeback s'installe sur une <strong>petite surface murale</strong> et ne réclame qu'une <strong>faible consommation électrique</strong>.</p>
+                <p class="text-option"></p>
+              </div>
+            </div>
+            <!---------------->
+
+          </li>
+                  <li style="float: left; list-style: none; position: relative; width: 1110px;">
+
+            <!---------------->
+            <div class="row argument" data-wow-delay="0s">
+              <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+                <img src="./Jukeback_files/icon_gaintemps.png">
+                <h4>L'astuce</h4>
+                <p>Jukeback vous propose des playlists mises à jour quotidiennement.</p>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+                <h1>Jukeback vous fait gagner du temps !</h1>
+                <h2>Une aide précieuse pour vos barmans</h2>
+                <p>Gardez le <strong>contrôle de la diffusion musicale</strong> via une <strong>interface</strong> web très <strong>simple</strong>.
+<strong>En cas de rush</strong>, vos barmans peuvent activer le &lt;&lt; <strong>mode programmation</strong> &gt;&gt; en <strong>1 clic</strong> et <strong>lancer</strong> de <strong>multiples playlists</strong>.
+Ainsi, vos barmans <strong>focalisent leur énergie</strong> sur d'<strong>autres priorités</strong>. </p>
+                <p class="text-option"></p>
+              </div>
+            </div>
+            <!---------------->
+
+          </li>
+                  <li style="float: left; list-style: none; position: relative; width: 1110px;">
+
+            <!---------------->
+            <div class="row argument" data-wow-delay="0s">
+              <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+                <img src="./Jukeback_files/icon_communication.png">
+                <h4>Bonus</h4>
+                <p>Profitez de multiples supports de communication disponibles.</p>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+                <h1>Jukeback vous aide à communiquer !</h1>
+                <h2>COMMUNIQUEZ AVEC VOS CLIENTS</h2>
+                <p><strong>Partagez</strong> chacun de vos <strong>événements</strong> grâce à l'application mobile Jukeback disponible <strong>gratuitement</strong> pour <strong>iPhone/iPad</strong> et <strong>Android</strong>.
+<strong>Attirez de nouveaux clients</strong> en affichant toutes les informations essentielles de votre établissement sur l'application.</p>
+                <p class="text-option"></p>
+              </div>
+            </div>
+            <!---------------->
+
+          </li>
+                  <li style="float: left; list-style: none; position: relative; width: 1110px;">
+
+            <!---------------->
+            <div class="row argument" data-wow-delay="0s">
+              <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+                <img src="./Jukeback_files/icon_personnalisation.png">
+                <h4>L'astuce</h4>
+                <p>Jukeback s'adapte à vos styles musicaux.</p>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+                <h1>Jukeback est à votre image !</h1>
+                <h2>Démarquez-vous !</h2>
+                <p><strong>Exploitez toutes les possibilités</strong> offertes par Jukeback pour obtenir une <strong>différenciation poussée de votre établissement</strong>.
+Ajoutez <strong>votre logo*</strong> sur la borne Jukeback et profitez de <strong>playlists personnalisées</strong>.</p>
+                <p class="text-option"></p>
+              </div>
+            </div>
+            <!---------------->
+
+          </li>
+                  <li style="float: left; list-style: none; position: relative; width: 1110px;">
+
+            <!---------------->
+            <div class="row argument" data-wow-delay="0s">
+              <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+                <img src="./Jukeback_files/icon_rapporte.png">
+                <h4>L'astuce</h4>
+                <p>Offrez de la musique à vos meilleurs clients grâce à un système de jetons.</p>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+                <h1>Jukeback vous rapporte !</h1>
+                <h2>Augmentez votre chiffre d'affaires !</h2>
+                <p>L'offre Jukeback comprend <strong>la location, l'assistance et la maintenance</strong>.
+<strong>Récupérez la totalité des dépenses de vos clients</strong> via le monnayeur de la borne Jukeback.
+<strong>Renforcez l'attractivité</strong> de votre bar et ainsi <strong>le volume de consommation</strong> de votre clientèle.</p>
+                <p class="text-option"></p>
+              </div>
+            </div>
+            <!---------------->
+
+          </li>
+              <li style="float: left; list-style: none; position: relative; width: 1110px;" class="bx-clone">
+
+            <!---------------->
+            <div class="row argument" data-wow-delay="0s">
+              <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+                <img src="./Jukeback_files/icon_mythe.png">
+                <h4>Le plus</h4>
+                <p>La borne tactile crée un espace de rencontres original.</p>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+                <h1>Jukeback signe le retour d'un mythe !</h1>
+                <h2>Le nouvel outil ludique</h2>
+                <p>Jukeback permet à vos clients de <strong>participer à l'ambiance musicale</strong> de votre établissement.
+<strong>Des jeux</strong> proposés offrent une <strong>interactivité</strong> entre vos barmans et votre clientèle.
+Grâce à l'<strong>application mobile*</strong>, vos clients peuvent récupérer les <strong>informations</strong> sur les <strong>chansons diffusées</strong> et <strong>voter</strong> pour ces dernières.</p>
+                <p class="text-option"></p>
+              </div>
+            </div>
+            <!---------------->
+
+          </li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="https://www.jukeback.com/">Prev</a><a class="bx-next" href="https://www.jukeback.com/">Next</a></div></div></div>
+    </div>
+
+          <!---------------->
+      <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+        <div class="row argument" data-wow-delay="0s">
+          <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+            <img src="./Jukeback_files/icon_mythe.png">
+            <h4>Le plus</h4>
+            <p>La borne tactile crée un espace de rencontres original.</p>
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+            <h1>Jukeback signe le retour d'un mythe !</h1>
+            <h2>Le nouvel outil ludique</h2>
+            <p>Jukeback permet à vos clients de <strong>participer à l'ambiance musicale</strong> de votre établissement.
+<strong>Des jeux</strong> proposés offrent une <strong>interactivité</strong> entre vos barmans et votre clientèle.
+Grâce à l'<strong>application mobile*</strong>, vos clients peuvent récupérer les <strong>informations</strong> sur les <strong>chansons diffusées</strong> et <strong>voter</strong> pour ces dernières.</p>
+            <p class="text-option"></p>
+          </div>
+        </div>
+      </div>
+      <!---------------->
+          <!---------------->
+      <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+        <div class="row argument" data-wow-delay="0s">
+          <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+            <img src="./Jukeback_files/icon_borne.png">
+            <h4>L'astuce</h4>
+            <p>L'installation est réalisée par un professionnel et elle ne prend que quelques minutes.</p>
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+            <h1>Jukeback est conçu pour vous !</h1>
+            <h2>Élaboré spécialement pour les lieux agités</h2>
+            <p>La <strong>borne tactile</strong> est <strong>robuste</strong>, parée d'une vitre de <strong>protection sécurisée</strong> et conçue pour <strong>gérer les éclaboussures</strong>.
+Bien pensée et avec ses dimensions limitées, la borne jukeback s'installe sur une <strong>petite surface murale</strong> et ne réclame qu'une <strong>faible consommation électrique</strong>.</p>
+            <p class="text-option"></p>
+          </div>
+        </div>
+      </div>
+      <!---------------->
+          <!---------------->
+      <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+        <div class="row argument" data-wow-delay="0s">
+          <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+            <img src="./Jukeback_files/icon_gaintemps.png">
+            <h4>L'astuce</h4>
+            <p>Jukeback vous propose des playlists mises à jour quotidiennement.</p>
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+            <h1>Jukeback vous fait gagner du temps !</h1>
+            <h2>Une aide précieuse pour vos barmans</h2>
+            <p>Gardez le <strong>contrôle de la diffusion musicale</strong> via une <strong>interface</strong> web très <strong>simple</strong>.
+<strong>En cas de rush</strong>, vos barmans peuvent activer le &lt;&lt; <strong>mode programmation</strong> &gt;&gt; en <strong>1 clic</strong> et <strong>lancer</strong> de <strong>multiples playlists</strong>.
+Ainsi, vos barmans <strong>focalisent leur énergie</strong> sur d'<strong>autres priorités</strong>. </p>
+            <p class="text-option"></p>
+          </div>
+        </div>
+      </div>
+      <!---------------->
+          <!---------------->
+      <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+        <div class="row argument" data-wow-delay="0s">
+          <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+            <img src="./Jukeback_files/icon_communication.png">
+            <h4>Bonus</h4>
+            <p>Profitez de multiples supports de communication disponibles.</p>
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+            <h1>Jukeback vous aide à communiquer !</h1>
+            <h2>COMMUNIQUEZ AVEC VOS CLIENTS</h2>
+            <p><strong>Partagez</strong> chacun de vos <strong>événements</strong> grâce à l'application mobile Jukeback disponible <strong>gratuitement</strong> pour <strong>iPhone/iPad</strong> et <strong>Android</strong>.
+<strong>Attirez de nouveaux clients</strong> en affichant toutes les informations essentielles de votre établissement sur l'application.</p>
+            <p class="text-option"></p>
+          </div>
+        </div>
+      </div>
+      <!---------------->
+          <!---------------->
+      <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+        <div class="row argument" data-wow-delay="0s">
+          <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+            <img src="./Jukeback_files/icon_personnalisation.png">
+            <h4>L'astuce</h4>
+            <p>Jukeback s'adapte à vos styles musicaux.</p>
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+            <h1>Jukeback est à votre image !</h1>
+            <h2>Démarquez-vous !</h2>
+            <p><strong>Exploitez toutes les possibilités</strong> offertes par Jukeback pour obtenir une <strong>différenciation poussée de votre établissement</strong>.
+Ajoutez <strong>votre logo*</strong> sur la borne Jukeback et profitez de <strong>playlists personnalisées</strong>.</p>
+            <p class="text-option"></p>
+          </div>
+        </div>
+      </div>
+      <!---------------->
+          <!---------------->
+      <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+        <div class="row argument" data-wow-delay="0s">
+          <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs icon_astuce" data-wow-delay="1s">
+            <img src="./Jukeback_files/icon_rapporte.png">
+            <h4>L'astuce</h4>
+            <p>Offrez de la musique à vos meilleurs clients grâce à un système de jetons.</p>
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-xs-12 contenu_infos">
+            <h1>Jukeback vous rapporte !</h1>
+            <h2>Augmentez votre chiffre d'affaires !</h2>
+            <p>L'offre Jukeback comprend <strong>la location, l'assistance et la maintenance</strong>.
+<strong>Récupérez la totalité des dépenses de vos clients</strong> via le monnayeur de la borne Jukeback.
+<strong>Renforcez l'attractivité</strong> de votre bar et ainsi <strong>le volume de consommation</strong> de votre clientèle.</p>
+            <p class="text-option"></p>
+          </div>
+        </div>
+      </div>
+      <!---------------->
+    
+
+    <div class="hidden-sm hidden-xs" style="text-align:center;margin-bottom:5vh;">
+      <a href="https://www.jukeback.com/#fonctionnement" class="scrolla" style="padding:10px 20px;border-radius:3px;background:#fa322d;color:#FFFFFF;line-height:60px;text-transform:uppercase;font-family:Paytone One;">comment ça fonctionne ?</a>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="fullscreen background parallax hidden-sm hidden-xs not-overflow" style="background-image: url(&quot;img/background_jukeback_03_bis.jpg&quot;); background-attachment: fixed; background-size: 1349px 897.085px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+  <div class="content-a">
+    <div class="content-b" style="background:url(&#39;img/quadrillage.png&#39;);text-align:center;color:#FFFFFF;">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="ancre_hidden" id="fonctionnement">&nbsp;</div>
+
+<div class="apropos hidden-sm hidden-xs">
+  <div class="container all_arguments">
+
+    <!---------------->
+    <div class="row argument wow fadeInLeft hidden-xs" data-wow-delay="0s" style="visibility: hidden; animation-delay: 0s; animation-name: none; background: rgb(255, 255, 255);">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenu_infos text-center">
+        <h1>Comment ça fonctionne ?</h1>
+        <p>
+          Seuls sont nécessaires : un branchement électrique et une connexion wi-fi.<br>
+          Jukeback s'utilise sur votre système audio actuel comprenant votre ordinateur et vos enceintes.
+        </p>
+        <div class="text-center">
+          <img src="./Jukeback_files/fonctionnement.png" class="img-responsive">
+        </div>
+      </div>
+    </div>
+    <!---------------->
+
+    <div class="hidden-sm hidden-xs" style="text-align:center;margin-bottom:5vh;">
+      <a href="https://www.jukeback.com/#commander" class="scrolla" style="padding:10px 20px;border-radius:3px;background:#fa322d;color:#FFFFFF;line-height:60px;text-transform:uppercase;font-family:Paytone One;">Commandez votre Jukeback</a>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="fullscreen background parallax hidden-sm hidden-xs not-overflow" style="background-image: url(&quot;img/background_jukeback_02_bis.jpg&quot;); background-attachment: fixed; background-size: 1349px 897.085px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+  <div class="content-a">
+    <div class="content-b" style="background:url(&#39;img/quadrillage.png&#39;);text-align:center;color:#FFFFFF;">
+    </div>
+  </div>
+</div>
+
+<div class="fullscreen background parallax hidden-lg hidden-md hidden-xs not-overflow" style="background-image: url(&quot;img/background_jukeback_03_bis.jpg&quot;); background-attachment: fixed; background-size: 1051.13px 699px; background-position: 50% -69.2219px;" data-img-width="1600" data-img-height="1064" data-diff="100">
+  <div class="content-a">
+    <div class="content-b" style="background:url(&#39;img/quadrillage.png&#39;);text-align:center;color:#FFFFFF;">
+    </div>
+  </div>
+</div>
+
+
+<div class="ancre_hidden" id="presse">&nbsp;</div>
+<div class="presse">
+  <div class="container">
+    <h1>Ils parlent de Jukeback</h1>
+    <div class="bx-wrapper" style="max-width: 2250px; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 175px;"><ul class="bxsliderpresse" style="width: 1915%; position: relative; transition-duration: 1.5s; transform: translate3d(-5740px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 380px;" class="bx-clone"><img src="./Jukeback_files/medias-republicainlorrain.png" alt="Républicain Lorrain">18 février 2016<h5>Républicain Lorrain</h5></li><li style="float: left; list-style: none; position: relative; width: 380px;" class="bx-clone"><img src="./Jukeback_files/medias-estrepublicain.png" alt="Est Républicain">17 février 2016<h5>Est Républicain</h5></li><li style="float: left; list-style: none; position: relative; width: 380px;" class="bx-clone"><img src="./Jukeback_files/medias-france3lorraine.png" alt="France 3 Lorraine">13 mai 2015<h5>France3 Lorraine</h5></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-republicainlorrain.png" alt="Républicain Lorrain">25 mai 2016<h5>Républicain Lorrain</h5><i>Édition de Metz</i></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-francebleusudlorraine.png" alt="France Bleu Sud Lorraine">20 mai 2016<h5>France Bleue Sud Lorraine</h5><i>La Lorraine est Formidable</i></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-republicainlorrain.png" alt="Républicain Lorrain">19 mai 2016<h5>Républicain Lorrain</h5><i>Édition de Metz et Vallée de l'Orne</i></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-grandestmagazine.png" alt="Grand Est Magazine">Mai 2016<h5>Grand Est Magazine</h5></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-lapressedevesoul.png" alt="La Presse de Vesoul">28 avril 2016<h5>La Presse de Vesoul</h5></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-republicainlorrain.png" alt="Républicain Lorrain">22 avril 2016<h5>Républicain Lorrain</h5><i>Édition Belfort</i></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-m6.png" alt="M6 - Journal 1245">12 avril 2016<h5>M6</h5><i>Journal 1245</i></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-usinedigitale.png" alt="Usine Digitale">06 avril 2016<h5>Usine Digitale</h5></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-france3lorraine.png" alt="France 3 Lorraine">06 avril 2016<h5>France 3 Lorraine</h5><i>Reportage Startupshow42 2016</i></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-estrepublicain.png" alt="Est Républicain">07 mars 2016<h5>Est Républicain</h5></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-dna.png" alt="Dernières Nouvelles Alsace">27 février 2016<h5>Dernières Nouvelles d'Alsace</h5></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-vosgesmatin.png" alt="Vosges Matin">20 février 2016<h5>Vosges Matin</h5><i>Édition Epinal et la Plaine</i></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-vosgesmatin.png" alt="Vosges Matin">19 février 2016<h5>Vosges Matin</h5><i>Web</i></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-tv8.png" alt="TV8 Infos">18 février 2016<h5>TV8 Infos</h5></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-republicainlorrain.png" alt="Républicain Lorrain">18 février 2016<h5>Républicain Lorrain</h5></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-estrepublicain.png" alt="Est Républicain">17 février 2016<h5>Est Républicain</h5></li>
+      <li style="float: left; list-style: none; position: relative; width: 380px;"><img src="./Jukeback_files/medias-france3lorraine.png" alt="France 3 Lorraine">13 mai 2015<h5>France3 Lorraine</h5></li>
+    <li style="float: left; list-style: none; position: relative; width: 380px;" class="bx-clone"><img src="./Jukeback_files/medias-republicainlorrain.png" alt="Républicain Lorrain">25 mai 2016<h5>Républicain Lorrain</h5><i>Édition de Metz</i></li><li style="float: left; list-style: none; position: relative; width: 380px;" class="bx-clone"><img src="./Jukeback_files/medias-francebleusudlorraine.png" alt="France Bleu Sud Lorraine">20 mai 2016<h5>France Bleue Sud Lorraine</h5><i>La Lorraine est Formidable</i></li><li style="float: left; list-style: none; position: relative; width: 380px;" class="bx-clone"><img src="./Jukeback_files/medias-republicainlorrain.png" alt="Républicain Lorrain">19 mai 2016<h5>Républicain Lorrain</h5><i>Édition de Metz et Vallée de l'Orne</i></li></ul></div><div class="bx-controls bx-has-controls-direction bx-has-controls-auto"><div class="bx-controls-direction"><a class="bx-prev" href="https://www.jukeback.com/">Prev</a><a class="bx-next" href="https://www.jukeback.com/">Next</a></div><div class="bx-controls-auto"><div class="bx-controls-auto-item"><a class="bx-start active" href="https://www.jukeback.com/">Start</a></div><div class="bx-controls-auto-item"><a class="bx-stop" href="https://www.jukeback.com/">Stop</a></div></div></div></div>
+  </div>
+</div>
+
+
+<div class="ancre_hidden" id="commander">&nbsp;</div>
+<div class="commander">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8" style="">
+        <h1>Contact</h1>
+        <h2></h2>
+                  <p>
+            Vous souhaitez un complément d'informations ou commander la solution Jukeback ?<br>
+            Contactez-nous via le formulaire ci-dessous.
+          </p>
+          <form data-toggle="validator" role="form" method="post" onsubmit="target_popup(this)" action="https://www.jukeback.com/popup_contact.php">
+            <div class="form-group">
+              <label for="nom">Votre nom</label>
+              <input type="text" id="nom" name="nom" class="form-control" required="">
+            </div>
+            <div class="form-group">
+              <label for="email">Votre email</label>
+              <input type="email" id="email" name="email" class="form-control" data-error="votre adresse mail n&#39;est pas valide" required="">
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="telephone">Votre téléphone</label>
+              <input type="tel" id="telephone" name="telephone" class="form-control" required="">
+            </div>
+            <div class="form-group">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" class="form-control" rows="3" required=""></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" name="submit" value="envoyer" class="btn btn-default btn-mail">
+            </div>
+          </form>
+                  </div>
+        <div class="col-md-5 hidden">
+          <div style="background:#291f26;font-family:american captain;color:#FFFFFF;text-align:center;font-size:2em;padding:5px 9px;border-radius:3px 3px 0 0;">
+            Jukeback recrute
+          </div>
+          <div style="height:400px;background:#291f26;color:#FFFFFF;font-size:1em;padding:5px 9px;">
+            <ul style="font-size:1.2em;line-height:5em;">
+              <li style="list-style:square;">un(e) commercial(e)</li>
+              <li style="list-style:square;">un(e) développeur(se) AngularJS</li>
+              <li style="list-style:square;">un(e) chargé(e) de communication web &amp; événementielle</li>
+            </ul>
+          </div>
+          <div style="background:#291f26;color:#FFFFFF;text-align:center;font-size:1em;padding:5px 9px;border-radius:0 0 3px 3px;font-weight:bold;">
+            ⇽<br>
+            Vous avez le profil recherché ?<br>
+            Contactez-nous !
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>
+
+
+<footer class="footer">
+  <div class="ancre_hidden" id="trouverjukeback">&nbsp;</div>
+  <div class="" style="background-color:#291f27;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+          <h1 style="color:#d8cdc0;">Où trouver un Jukeback ?</h1>
+          <div id="mapJukeback" style="border: 4px solid rgb(216, 205, 192); height: 88vh; text-align: center; padding-top: 25vh; position: relative; overflow: hidden; transform: translateZ(0px); background: rgb(239, 239, 239);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 163px; top: 162px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -93px; top: 162px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 163px; top: -94px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 163px; top: 418px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 419px; top: 162px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -93px; top: -94px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -93px; top: 418px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 419px; top: -94px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 419px; top: 418px;"></div></div></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 163px; top: 162px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -93px; top: 162px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 163px; top: -94px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 163px; top: 418px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 419px; top: 162px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -93px; top: -94px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -93px; top: 418px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 419px; top: -94px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 419px; top: 418px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div></div></div></div><div style="position: absolute; z-index: 0; transform: translateZ(0px); left: 0px; top: 0px;"><div style="overflow: hidden;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="transform: translateZ(0px); position: absolute; left: 163px; top: 162px; transition: opacity 200ms ease-out;"><img src="./Jukeback_files/vt(1)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: -93px; top: 162px; transition: opacity 200ms ease-out;"><img src="./Jukeback_files/vt(2)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: -93px; top: 418px; transition: opacity 200ms ease-out;"><img src="./Jukeback_files/vt(3)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 163px; top: -94px; transition: opacity 200ms ease-out;"><img src="./Jukeback_files/vt(4)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: -93px; top: -94px; transition: opacity 200ms ease-out;"><img src="./Jukeback_files/vt(5)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 163px; top: 418px; transition: opacity 200ms ease-out;"><img src="./Jukeback_files/vt(6)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 419px; top: 418px; transition: opacity 200ms ease-out;"><img src="./Jukeback_files/vt(7)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 419px; top: -94px; transition: opacity 200ms ease-out;"><img src="./Jukeback_files/vt(8)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 419px; top: 162px; transition: opacity 200ms ease-out;"><img src="./Jukeback_files/vt(9)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%; transition-duration: 0.3s; opacity: 0; display: none;"><p class="gm-style-pbt">Utilisez deux doigts pour déplacer la carte</p></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 4; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=48.570928,6.5&amp;z=8&amp;t=m&amp;hl=fr-FR&amp;gl=US&amp;mapclient=apiv3" title="Cliquez ici pour afficher cette zone sur Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="./Jukeback_files/google_white5.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 173px; top: 170px; background-color: white;"><div style="padding: 0px 0px 10px; font-size: 16px;">Données cartographiques</div><div style="font-size: 13px;">Données cartographiques ©2016 GeoBasis-DE/BKG (©2009), Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="./Jukeback_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 285px; bottom: 0px; width: 318px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Données cartographiques</a><span>Données cartographiques ©2016 GeoBasis-DE/BKG (©2009), Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Données cartographiques ©2016 GeoBasis-DE/BKG (©2009), Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 166px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/fr-FR_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Conditions d'utilisation</a></div></div><div style="width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="./Jukeback_files/sv5.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 112px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Signaler à Google une erreur dans la carte routière ou les images" href="https://www.google.com/maps/@48.570928,6.5,8z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Signaler une erreur cartographique</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; -webkit-user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="-webkit-user-select: none; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; width: 28px; height: 55px; background-color: rgb(255, 255, 255);"><div title="Zoom avant" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./Jukeback_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; top: 0px; background-color: rgb(230, 230, 230);"></div><div title="Zoom arrière" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./Jukeback_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div></div></div><div class="gm-svpc" controlwidth="28" controlheight="28" style="box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Contrôle de Pegman dans Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="./Jukeback_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Pegman est au-dessus de la carte." style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Jukeback_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Contrôle de Pegman dans Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Jukeback_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Faire pivoter le plan à 90°" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; display: none; background-color: rgb(255, 255, 255);"><img src="./Jukeback_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="./Jukeback_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Afficher un plan de ville" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 22px; font-weight: 500; background-color: rgb(255, 255, 255); background-clip: padding-box;">Plan</div><div style="z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; left: 0px; top: 31px; text-align: left; display: none; background-color: white;"><div draggable="false" title="Afficher le relief sur la carte" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="./Jukeback_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Relief</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Afficher les images satellite" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-left-width: 0px; min-width: 40px; background-color: rgb(255, 255, 255); background-clip: padding-box;">Satellite</div><div style="z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; right: 0px; top: 31px; text-align: left; display: none; background-color: white;"><div draggable="false" title="Afficher les images satellite avec le nom des rues" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="./Jukeback_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Légendes</label></div></div></div></div></div></div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="text-align:justify;">
+          <h1 style="color:#d8cdc0;">Nous suivre</h1>
+          <p style="color:#d8cdc0;">
+            Retrouvez Jukeback et sa communauté sur les réseaux sociaux.
+          </p>
+          <p>
+            <a class="fb-tw" href="https://www.facebook.com/jukebackofficiel/" target="_blank" title="Retrouvez Jukeback sur Facebook"><img src="./Jukeback_files/fb_icon.png" height="20px"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Facebook<br></span></a>
+            <a class="fb-tw" href="https://twitter.com/jukeback_off" target="_blank" title="Retrouvez Jukeback sur Twitter"><img src="./Jukeback_files/tw_icon.png" height="20px"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Twitter<br></span></a>
+            <a class="fb-tw" href="https://www.instagram.com/jukebackofficiel/" target="_blank" title="Retrouvez Jukeback sur Instagram"><img src="./Jukeback_files/instagram_icon.png" height="20px"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Instagram<br></span></a>
+            <!-- <a class="fb-tw" href="http://whyd.com/u/568a7a594bf212908fb65f05" target="_blank" title="Retrouvez Jukeback sur Whyd"><img src="img/whyd_icon.png" height="20px"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Whyd<br /></span></a> -->
+            <a class="fb-tw" href="https://soundsgood.co/me/curator/jukeback" target="_blank" title="Retrouvez Jukeback sur Soundsgood"><img src="./Jukeback_files/soundsgood_icon.png" height="20px"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Soundsgood<br></span></a>
+            <a class="fb-tw" href="https://deezer.com/jukeback" target="_blank" title="Retrouvez Jukeback sur Deezer"><img src="./Jukeback_files/deezer_icon.png" height="20px"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Deezer<br></span></a>
+            <a class="fb-tw" href="http://open.spotify.com/user/jukeback/" target="_blank" title="Retrouvez Jukeback sur Spotify"><img src="./Jukeback_files/spotify_icon.png" height="20px"> <span class="hidden-lg hidden-md">Retrouvez Jukeback sur Spotify</span></a>
+          </p>
+          <hr>
+          <p style="color:#FFFFFF;">
+            </p><h4 style="color:#FFFFFF;">Jukeback</h4>
+            2 rue Jacques Villermaux<br>
+            54000 Nancy<br>
+            FRANCE
+          <p></p>
+          <hr>
+          <h4 style="color:#FFFFFF;">Application Jukeback</h4>
+          <p>
+            Téléchargez gratuitement l'application Jukeback pour retrouver les lieux équipés.
+          </p>
+          <a href="https://play.google.com/store/apps/details?id=fr.smartfizz.android.jukeback&amp;hl=fr" class="" target="_blank"><img src="./Jukeback_files/download_jukeback_google_play_original.png" height="40px"></a>
+          <a href="https://itunes.apple.com/fr/app/jukeback/id975040106?mt=8" class="" target="_blank"><img src="./Jukeback_files/download_jukeback_appstore_original.png" height="40px"></a>
+          <hr>
+          <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 520px; height: 300px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" data-widget-id="710761181741522944" title="Twitter Timeline" src="./Jukeback_files/saved_resource.html"></iframe>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <hr>
+          <img src="./Jukeback_files/logo-french-tech.png" style="float:left;width:75px;margin-right:10px;">
+          <p style="text-transform:uppercase;font-size:0.8em;color:#d8cdc0;">
+            <a href="https://www.jukeback.com/dl/Jukeback_PressKit_2016.zip" title="Télécharger le Press Kit Jukeback">Press Kit</a> | <a href="https://www.jukeback.com/#" target="_blank">Mentions légales</a> | <a href="https://www.jukeback.com/#" target="_blank">Plan du site</a> | <a href="https://www.jukeback.com/#" target="_blank">Médias</a><br>
+            <br>
+            <a href="https://www.jukeback.com/" target="_blank">Jukeback</a> est une marque déposée de <a href="http://smartfizz.fr/" target="_blank">©‎ Smartfizz SAS</a><br>
+            2015/2016
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="./Jukeback_files/bootstrap.min.js"></script>
+
+<!-- Parallax -->
+<script type="text/javascript" src="./Jukeback_files/parallax.min.js"></script>
+
+
+<!-- config bxslider-->
+<script>
+var slider = $('.bxslider').bxSlider({
+    pagerCustom: '#bx-pager',
+    auto: true,
+    speed: '1500',
+});
+
+$('a.pager-prev').click(function () {
+    var current = slider.getCurrentSlide();
+    slider.goToPrevSlide(current) - 1;
+});
+$('a.pager-next').click(function () {
+    var current = slider.getCurrentSlide();
+    slider.goToNextSlide(current) + 1;
+});
+</script>
+
+
+<!-- config bxslider-->
+<script>
+$(document).ready(function(){
+  $('.bxsliderpresse').bxSlider({
+    auto: true,
+    autoControls: true,
+    Controls: true,
+    hideControlOnEnd: false,
+    pager: false,
+    speed: '1500',
+    minSlides: '3',
+    maxSlides: '3',
+    moveSlides: '3',
+    slideWidth: '750',
+  });
+});
+</script>
+
+
+<!-- affichage menu active -->
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".nav a").on("click", function(){
+    $(".nav").find(".active").removeClass("active");
+    $(this).parent().addClass("active");
+  });
+});
+
+$('.nav a').on('click', function(){
+  if($('.navbar-toggle').css('display') !='none'){
+    $(".navbar-toggle").trigger( "click" );
+  }
+});
+</script>
+
+<!-- smooth scroll -->
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.scrolla').click(function(){
+    $('html, body').animate({
+      scrollTop: $( $(this).attr('href') ).offset().top
+    }, 1500);
+    return false;
+  });
+});
+</script>
+
+
+<script src="./Jukeback_files/wow.min.js"></script>
+<script>
+wow = new WOW(
+  {
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       false,       // default
+    live:         true        // default
+  }
+)
+wow.init();
+</script>
+
+<script>
+function target_popup(form) {
+  window.open('', 'formpopup', 'width=400,height=400,resizeable,scrollbars');
+  form.target = 'formpopup';
+}
+</script>
+
+<!-- Popover -->
+<script>
+$(function(){
+  $("[data-toggle=popover]").popover({
+    html : true,
+    content: function() {
+      var content = $(this).attr("data-popover-content");
+      return $(content).children(".popover-body").html();
+    },
+    title: function() {
+      var title = $(this).attr("data-popover-content");
+      return $(title).children(".popover-heading").html();
+    }
+  });
+});
+</script>
+
+
+<script>
+$(window).load(function()
+{
+// Define the style variables
+var $background_color = "#ffffff";
+var $font = "'Roboto Slab',Georgia,Serif";
+var $font_weight = "normal";
+var $border_color = "#fa322d";
+var $border_radius = "3px";
+var $text_color = "#555555";
+var $link_color = "#FFFFFF";
+var $name_color = "#2d936d";
+var $subtext_color = "#939393"; // Colour of any small text
+var $sublink_color = "#2d936d"; // Colour of smaller links, eg: @user, date, expand/collapse links
+var $avatar_border = "0px solid #fa322d";
+var $avatar_border_radius = "50%";
+var $icon_color = "#fa322d"; // Color of the reply/retweet/favourite icons
+var $icon_hover_color = "#fa322d"; // Hover color the reply/retweet/favourite icons
+var $header_background = "#fa322d";
+var $header_text_color = "#ffffff";
+var $follow_button_link_color = "#fa322d";
+var $footer_background = "#fa322d";
+var $footer_tweetbox_background = "#fa322d";
+var $footer_tweetbox_textcolor = "#ffffff";
+var $footer_tweetbox_border ="0px";
+var $load_more_background ="#fa322d";
+var $load_more_text_color = "#ffffff";
+
+// Apply the styles
+$("iframe").contents().find('head').append('<style>.html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button, .tweet-box-button{font-family:'+$font+' !important;font-weight:'+$font_weight+' !important;} .timeline{border-radius: ' + $border_radius + '!important;} .thm-dark .retweet-credit,.h-feed, .stats strong{color:' + $text_color + ' !important;}a:not(.follow-button):not(.tweet-box-button):not(.expand):not(.u-url), .load-more{color:' + $link_color + ' ;} .follow-button{color:' + $follow_button_link_color + ' !important;} .timeline-header{background:' + $header_background + '; border-radius:' + $border_radius + ' ' + $border_radius + ' 0px 0px;} .timeline-header h1 a{color:' + $header_text_color + ' !important;} .timeline-footer{border-radius:0px 0px ' + $border_radius + ' ' + $border_radius + ' !important; background:' + $footer_background + ' !important;} .tweet-box-button{background-color:' + $footer_tweetbox_background + ' !important; color:' + $footer_tweetbox_textcolor + ' !important; border:' + $footer_tweetbox_border + ' !important;} .timeline .stream, .tweet-actions{background:' + $background_color + ' !important;} .tweet-actions{box-shadow:0 0 10px 5px' + $background_color + ' !important;} .ic-mask{background-color:' + $icon_color + ' !important;} a:hover .ic-mask, a:focus .ic-mask{background-color:' + $icon_hover_color + ' !important;} .header .avatar{border-radius: '+ $avatar_border_radius + ' !important; border:' + $avatar_border + ' !important;} .p-name{color:'+$name_color+' !important;} .customisable-border{border-color:' + $border_color + ' !important;} span.p-nickname, .u-url, .expand{color:'+$sublink_color+' !important;} .load-more, .no-more-pane {background-color:' + $load_more_background + ' !important; color:' + $load_more_text_color + '!important;} .retweet-credit{color:' + $subtext_color + ' !important;}</style>');
+});
+</script>
+
+
+
+<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" src="./Jukeback_files/saved_resource(1).html"></iframe></body></html>
